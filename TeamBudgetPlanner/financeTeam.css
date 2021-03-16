@@ -1,0 +1,30 @@
+#empID{
+border: 1px solid black;
+border-radius: 50px;
+border-spacing: 0 15px;
+border-collapse: collapse;
+padding: 30px;
+background-color: blanchedalmond;
+font-size: larger;
+vertical-align: middle;
+}
+body{
+    background-color: beige;
+}
+#btn{
+    background-color: #4CAF50; /* Green */
+    margin: 30px;
+     border: none;
+     color: white;
+     padding: 10px 32px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 16px;
+}
+nav{
+   
+    padding-top: 50px;
+    font-size: 20px;
+
+}
