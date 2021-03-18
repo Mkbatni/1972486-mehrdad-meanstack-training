@@ -4,7 +4,7 @@ function display()
 {
 
    var total = 0;
-   var table = document.getElementById("empID"); 
+  
    var body = document.getElementsByTagName("tbody")[0];
 
     for (let index = 0; index < localStorage.length; index++) {
