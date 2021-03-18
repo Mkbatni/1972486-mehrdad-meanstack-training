@@ -10,21 +10,21 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 </head>
 <body>
-   
-
-  Title : <input type="text" id="title"/>
-  Description : <textarea type="text" id="desc">
-      </textarea>
+  <form class ="mb-3">
+ 
+  <h5>Title</h5>  <input type="text" id="title"   class="form-control"/>
+  <h5>Articles</h5>  <textarea type="text" id="desc"  class="form-control" row= "3"></textarea>
   <input type="file" id="imageId"/>
-  <input type="button" value="Add Blog" 
-  onclick="addBlog()"/> 
-  <hr/>
-  <div>
-      <div id="titleInfo"></div>
-      <div id="descInfo"></div>
-      <img src="" id="imageInfo"/>
-  </div>
+  <br>
+  
 
+  <div class="row g-1">
+  <button type="button" class="btn btn-success" onclick="addBlog()" ><h5>Add Blog</h5>  </button>
+  <button type="button" class="btn btn-secondary" onclick="reset()" ><h5>Clear</h5></button>
+</div>
+  <hr/>
+
+</form> 
 <!-- 
   <table id="employeeDetails">
     <thead>
@@ -41,7 +41,11 @@
     </tbody>
 </table>
  -->
-
+<!--   <div>
+      <div id="titleInfo"></div>
+      <div id="descInfo"></div>
+      <img src="" id="imageInfo"/>
+  </div> -->
 
 <table id="employeeDetails" class="table table-striped">
   <thead>
