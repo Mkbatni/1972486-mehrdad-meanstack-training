@@ -1,0 +1,13 @@
+iframe {
+    width: 100px;
+    height: 50px;
+    margin: 0 auto;
+    background-color: white;
+  
+}
+body{
+    background-color:rgb(48, 68, 104);
+}
+.card{
+    background-color:rgb(123, 161, 161);
+}

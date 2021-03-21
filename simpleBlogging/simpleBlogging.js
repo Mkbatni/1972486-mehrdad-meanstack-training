@@ -18,6 +18,7 @@ function addBlog()
         var obj = read()
         insertNewRecords(obj);
     }
+  
     firstTime = false
   
     reset()
