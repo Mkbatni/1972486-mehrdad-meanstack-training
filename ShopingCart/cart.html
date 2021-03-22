@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check out</title>
+    <script src="cart.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="cart.css">
+  </head>
+
+<body>
+<br>
+
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+  <a class="nav-link" href="index.html">Features</a>
+  <a class="nav-link" href="index.html">Pricing</a>
+  
+  <a href="index.html">Previous Page</a> |
+</nav>
+
+    <form>       
+<table id="empID" class="table">
+<thead>
+
+    <tr>
+        <th>Quantity</th>
+        <th>Item Name </th>
+        <th>Price </th>
+        <th>Delete </th>
+     
+    </tr>
+</thead>
+<tbody>
+    <td ><br><h3>Total</h3>  </td>
+    <td colspand = 1 id="tt">  </td>
+</tbody>
+</table>
+<br>
+
+
+</form>
+
+
+<!-- <div ">
+  <button class="btn btn-primary" type="button">Button</button>
+  <button class="btn btn-primary" type="button">Button</button>
+</div>
+ -->
+<div class="d-grid gap-2">
+  <button type="button" class="btn btn btn-primary btn-lg" id="btn" value="display" onclick="display()">view your cart</button>
+  <button type="button" class="btn btn-secondary btn-lg"  onclick="pay()">Pay</button>
+  <button type="button" class="btn btn-warning btn-dark"   onclick="clearOut()">Clear your cart</button> 
+  
+</div>
+
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand">Navbar</a>
+    <a href="index.html">Go Back to previous page</a> 
+    <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+
+
+
+
+</body>
+</html>
