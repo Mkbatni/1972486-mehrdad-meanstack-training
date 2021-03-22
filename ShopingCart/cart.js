@@ -25,8 +25,8 @@ function display() {
     document.getElementById("tt").innerHTML = "<h4>$" + tmp + "</h4>";
 }
 function clearOut() {
+    alert("The cart is empty. please refresh the page");
     localStorage.clear();
-    alert("Your cart is clear now, please refresh the page!");
 }
 function pay() {
     alert("Thank you for shoping! come back soon.");

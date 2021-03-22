@@ -57,6 +57,7 @@ document.getElementById("tt").innerHTML = "<h4>$" + tmp + "</h4>";
 
 function clearOut()
 {
+    alert("The cart is empty. please refresh the page")
     localStorage.clear();
 }
 function pay()
