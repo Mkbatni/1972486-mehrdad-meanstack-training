@@ -1,0 +1,12 @@
+<div>
+
+<h2>Sign up</h2>
+
+<form [formGroup] = "loginRef" (ngSubmit)="checkUser()" >
+Username: <input type="text"  formControlName ="user" >
+password: <input type="password" formControlName= "pass">
+<input type="submit" value = submit>
+<input type="reset" value="reset">
+
+</form>
+</div>

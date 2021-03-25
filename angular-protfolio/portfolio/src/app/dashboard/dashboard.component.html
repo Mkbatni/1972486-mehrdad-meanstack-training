@@ -1,0 +1,30 @@
+
+
+<h2>My Portfolio</h2>
+<h3>Welocme Name: </h3>
+
+<form >
+    Contact Name: <input type="text" [value] = "cValue" #contactName>
+    Phone number: <input type="text" [value] = "pValue" #phoneNumber>
+    <input type="button" name = "save here" value = "Save" (click)= "saveToTable(contactName.value,phoneNumber.value)" >
+    
+</form>
+<hr>
+<!-- <ul>
+    <li *ngFor="let std of listOfContacts">{{std.name}} {{std.phoneNum}}</li>
+</ul> -->
+
+<h4>Contact Detail</h4>
+<table border = "2"> 
+    <tr>
+        <th>Name</th>
+        <th>Phone No</th>
+    </tr>
+  
+    <tr  *ngFor="let std of listOfContacts">
+        <td>{{std.name}} </td>
+        <td>{{std.phoneNum}}</td>
+        
+    </tr>
+   
+</table>
