@@ -1,19 +1,43 @@
-<div>
+<div >
+  <div >
+    <div >
+        <nav class="navbar navbar-expand-lg navbar-light bg-light"  >
+            <div class="container-fluid">
+         
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"><h2>Home</h2></a>
+                  </li>
+            
+                  <li class="nav-item">
+                    <a class="nav-link" href="/login"><h2>Login</h2>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><h2>Dashboard</h2></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
 
-<h2>Sign up</h2>
-
-<form [formGroup] = "loginRef" (ngSubmit)="checkUser()" >
-First Name: <input type="text" formControlName="firstName">
-Last Name: <input type="text" formControlName="lastName">
-Username: <input type="text"  formControlName ="user" >
-Password: <input type="password" formControlName= "pass">
-<input type="submit" value = submit>
-<input type="reset" value="reset">
+<form  style="background-color: rgb(193, 209, 205);"class="form-control form-control-lg" [formGroup] = "loginRef" (ngSubmit)="checkUser()" >
+First Name: <input type="text" formControlName="firstName"> <br> <br>
+Last Name: <input type="text" formControlName="lastName"> <br> <br>
+Username: <input type="text"  formControlName ="user" ><br> <br>
+Password : <input type="password" formControlName= "pass"><br> <br>
+<input  class="btn btn-primary"   type="submit" value = submit> 
+<input class="btn btn-secondary" type="reset" value="reset">
 
 </form>
 {{msg}}
 <div>
     
-    <button *ngIf ='false' (click) = 'DisplayInPrivate()' >Display</button>
+    <button class="btn btn-light" *ngIf ='true' (click) = 'DisplayInPrivate()' >Display</button>
+</div>
 </div>
 </div>

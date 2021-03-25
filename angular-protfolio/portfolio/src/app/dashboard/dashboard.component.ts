@@ -11,8 +11,11 @@ import { ContactClass } from '../ContactClass.model';
 export class DashboardComponent implements OnInit {
 
 output:string = "";
-cValue = "your contact name .. ";
-pValue = "phone number ..";
+cValue = "";
+pValue = "";
+ JsobObj = sessionStorage.getItem('0')
+ stringJson = JSON.parse(this.JsobObj || '{}') ;
+welcomeName:string = this.stringJson.first  + " " + this.stringJson.last;
 
 listOfContacts:Array<ContactClass> = new Array();
 
@@ -25,15 +28,12 @@ constructor() { }
   saveToTable(contactName:string,num:string)
   {
     this.output = contactName + "," + num ;
-    
+  
+   
     let conatact1 = new ContactClass(contactName,num);
     this.listOfContacts.push(conatact1);
     this.cValue = ""
     this.pValue = ""
   }
-  display()
-  {
-   
 
-  }
 }

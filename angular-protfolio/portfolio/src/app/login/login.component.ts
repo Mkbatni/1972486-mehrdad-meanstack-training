@@ -24,12 +24,21 @@ msg:string = "";
  let userName = obj.UserName;
     let passWord = obj.pass;
   
-    let data = localStorage.getItem(userName)!;
-    let dataS = JSON.parse(data);
+    let jsonData = localStorage.getItem(userName)!;
+    let jSonString = JSON.parse(jsonData);
 
-    if(data != null && passWord == dataS.pass)
+    //console.log(jSonString.user, jSonString.pass, jSonString.firstName , jSonString.last)
+    if(jsonData != null && passWord == jSonString.pass)
     {
+      let obj = {
+        first :  jSonString.firstName,
+        last : jSonString.lastName
+      }
+     
+      console.log(obj.first, obj.last);
+      sessionStorage.setItem('0',JSON.stringify(obj));
       this.router.navigate(["dashboard"])
+
     }
     else{
       this.msg = "Username or password is not recognized, did you try to sign up!";

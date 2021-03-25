@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -11,7 +12,7 @@ export class SignupComponent implements OnInit {
 msg:string = "";
 
 
-  constructor() { }
+constructor(public router : Router) { }
 
   loginRef = new FormGroup({
     firstName: new FormControl(),
@@ -43,7 +44,7 @@ var obj = {
    
     let tmpUser = this.loginRef.get('user')?.value;
     let tmpPass = this.loginRef.get('pass')?.value;
-
+    
     
     if(tmpUser != null && tmpPass != null)
     {
@@ -51,6 +52,7 @@ var obj = {
      
       //console.log(this.loginRef.get("user")?.value || '{}') 
       localStorage.setItem(key,JSON.stringify(obj));
+      this.router.navigate(["login"])
     }
     else{
       this.msg = "Please type in your user name and password!";
