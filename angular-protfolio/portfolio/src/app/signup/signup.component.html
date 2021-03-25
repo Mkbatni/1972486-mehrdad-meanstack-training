@@ -3,10 +3,17 @@
 <h2>Sign up</h2>
 
 <form [formGroup] = "loginRef" (ngSubmit)="checkUser()" >
+First Name: <input type="text" formControlName="firstName">
+Last Name: <input type="text" formControlName="lastName">
 Username: <input type="text"  formControlName ="user" >
-password: <input type="password" formControlName= "pass">
+Password: <input type="password" formControlName= "pass">
 <input type="submit" value = submit>
 <input type="reset" value="reset">
 
 </form>
+{{msg}}
+<div>
+    
+    <button *ngIf ='false' (click) = 'DisplayInPrivate()' >Display</button>
+</div>
 </div>
