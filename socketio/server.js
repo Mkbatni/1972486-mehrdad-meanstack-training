@@ -3,15 +3,34 @@
 let app = require("express")();
 let http = require("http").Server(app);
 let io = require("socket.io")(http);
+let mongooseModule = require("./mongooseModule.js")
 
-
-console.log(__dirname)
+let schemeName = "meanStack"
+let collectionName = "chatLog";
+let idCntr = 0;
+//console.log(__dirname)
+let lock = true;
 app.get("/", (req,res) =>res.sendFile(__dirname + "/index.html"));
 
 io.on ("connection", (socket) => {
-    console.log("client connected to application.....")
-    socket.on("chat", (name, msg) => console.log("Hello " + name + "\n" + "Your message is: " 
-    + msg))
+ 
+   
+    socket.on("chat", (nm, msg) =>
+    {
+     
+     
+        console.log("Hello " + nm + "\n" + "Your message is: " 
+        + msg)
+        let obj = {
+            _id : idCntr,
+            name : nm,
+            message : msg 
+
+        }
+        idCntr++;
+        mongooseModule.insertOneJsonObjToDb(schemeName,collectionName,obj)
+    })
+
 
 })
 
