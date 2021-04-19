@@ -120,7 +120,7 @@ app.get("/fetch", (req,res)=> {
                        
                        client.close();
                })
-               setTimeout(() => { res.json(jArr)   }, 500);
+               setTimeout(() => { res.json(jArr)   }, 2000);
        }
    })
    
