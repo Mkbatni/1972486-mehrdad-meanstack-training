@@ -12,7 +12,7 @@ let schemeName = "meanStack"
 let collectionName = "call_back"
 function jsonToDb()
 {
-    //it returns each json object from givenFile
+    //it returns the whole json 
     let data =   jsonModule.readJson(fileName);
     //it takes schemename, collectionName , json data, and insert all the data at once
     mongooseModule.insertToDb(schemeName,collectionName,data);
